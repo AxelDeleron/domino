@@ -44,7 +44,7 @@ public class Game{
       tableauJoueurs.add(joueurIAAjout);
       this.setNbJoueurs(2);
     }
-    setDominoPioche(0);
+    setDominoPioche(28 - 7 * getNbJoueurs());
   }
 
   public boolean stuckGame()
@@ -60,7 +60,7 @@ public class Game{
         }
       }
     }
-    if(stuckHand >= getTableauJoueur().size()) {return true;}
+    if(stuckHand == getTableauJoueur().size()) {return true;}
     else{return false;}
 
   }
